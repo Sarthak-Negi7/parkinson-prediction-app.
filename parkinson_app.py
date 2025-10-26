@@ -77,8 +77,9 @@ st.markdown(
 )
 
 # ----------------- load model safely -----------------
-MODEL_PATH = r"C:\Users\asus\OneDrive\Desktop\data analyst\parkinson_.pkl"
-SCALER_PATH = r"C:\Users\asus\OneDrive\Desktop\data analyst\scaler.pkl"
+current_dir = os.path.dirname(__file__)
+MODEL_PATH = os.path.join(current_dir, "parkinson_.pkl")
+SCALER_PATH = os.path.join(current_dir, "scaler.pkl")
 
 model = None
 scaler = None
@@ -288,3 +289,4 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
